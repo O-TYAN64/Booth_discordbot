@@ -3,7 +3,14 @@ discord:
   prefix: "!"
 
 booth:
-  default_tags:
-    - "Live2D"
+  tag_presets:
+    live2d:
+      include: ["Live2D", "モデル"]
+      exclude: ["R-18", "18禁"]
+    vrchat:
+      include: ["VRChat", "3Dアバター"]
+      exclude: ["NSFW"]
+  notify_preset: "live2d"   # 起動時のデフォルトプリセット名
+
   notify_channel_id: 123456789012345678
   notify_interval_minutes: 60
